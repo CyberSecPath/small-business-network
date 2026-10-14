@@ -1,48 +1,78 @@
-# Small Business Network Lab
+# Small Business Network — Cisco Packet Tracer
 
 ## Overview
-This project is a beginner networking lab built using Cisco Packet Tracer. It simulates a small office network with one router, one switch, and three PCs.
 
-The goal was to practice basic network configuration, IPv4 addressing, and connectivity testing.
+This project demonstrates the design, configuration, and connectivity testing of a small business network using Cisco Packet Tracer. The simulated network consists of a router, a switch, and three end devices connected through a local area network (LAN).
+
+The project documents the network topology, IPv4 addressing, subnet configuration, and connectivity verification using ICMP ping tests.
 
 ## Network Topology
-- 1 Cisco router (R1)
-- 1 Cisco switch (SW1)
-- 3 PCs (PC1, PC2, and PC3)
 
-The PCs connect to the switch, which connects to the router.
+The network includes the following components:
 
-## IP Addressing
+- **R1:** Router providing the default gateway for the LAN.
+- **SW1:** Switch connecting the end devices.
+- **PC1:** First end device.
+- **PC2:** Second end device.
+- **PC3:** Third end device.
+
+The devices communicate over the `192.168.10.0/24` IPv4 network.
+
+## Network Configuration
 
 | Device | IP Address | Subnet Mask | Default Gateway |
 |---|---|---|---|
-| R1 | 192.168.10.1 | 255.255.255.0 | N/A |
-| PC1 | 192.168.10.10 | 255.255.255.0 | 192.168.10.1 |
-| PC2 | 192.168.10.11 | 255.255.255.0 | 192.168.10.1 |
-| PC3 | 192.168.10.12 | 255.255.255.0 | 192.168.10.1 |
+| R1 — FastEthernet0/0 | `192.168.10.1` | `255.255.255.0` | N/A |
+| PC1 | `192.168.10.10` | `255.255.255.0` | `192.168.10.1` |
+| PC2 | `192.168.10.11` | `255.255.255.0` | `192.168.10.1` |
+| PC3 | `192.168.10.12` | `255.255.255.0` | `192.168.10.1` |
 
-## Skills Practiced
-- IPv4 addressing and subnet masks
-- Router interface configuration
-- Enabling interfaces with `no shutdown`
-- Connecting devices in Cisco Packet Tracer
-- Testing connectivity with `ping`
-- Basic network troubleshooting
+### Subnet Details
 
-## Connectivity Testing
-I used ping tests from PC1 to verify connectivity to:
-- The router (R1)
-- PC2
-- PC3
+- **Network address:** `192.168.10.0`
+- **CIDR notation:** `/24`
+- **Subnet mask:** `255.255.255.0`
+- **Usable IPv4 host range:** `192.168.10.1`–`192.168.10.254`
+- **Broadcast address:** `192.168.10.255`
+- **Default gateway:** `192.168.10.1`
 
-The successful ping tests confirmed connectivity between devices on the local network.
+## Configuration and Testing
 
-## Tools Used
-- Cisco Packet Tracer
+The project covers basic network setup and connectivity verification, including:
+
+- Connecting the router, switch, and end devices.
+- Assigning IPv4 addresses and subnet masks.
+- Configuring the default gateway on end devices.
+- Verifying device and interface connectivity.
+- Testing communication between PCs using ICMP ping.
+- Reviewing the topology and connectivity results in Packet Tracer.
+
+## Connectivity Verification
+
+ICMP ping tests were used to verify communication between devices on the LAN.
+
+Successful ping responses help confirm that the tested devices can communicate over the configured network.
+
+Connectivity testing can help identify problems involving IP addressing, subnet masks, interface status, or network connectivity.
 
 ## Project Files
-- `small-business-network.pkt` — Packet Tracer lab file
-- `2-screenshots/` — Screenshots documenting the configuration, connectivity tests, and final topology
 
-## Learning Goals
-This is an introductory hands-on project as I continue developing my networking skills and working toward networking and cybersecurity roles. Future projects will build on these fundamentals with network security and defensive security labs.
+- **Packet Tracer file (`.pkt`):** Contains the simulated network topology and device configuration.
+- **Screenshots:** Show the network topology, interface status, and connectivity test results.
+
+## Technologies and Concepts
+
+- Cisco Packet Tracer
+- Cisco router and switch fundamentals
+- Local area network (LAN) design
+- IPv4 addressing and subnetting
+- Default gateway configuration
+- ICMP ping testing
+- Basic network troubleshooting
+
+## Scope and Limitations
+
+This project is a simulated networking lab created in Cisco Packet Tracer. It demonstrates basic network design, IPv4 configuration, and connectivity verification.
+
+The project does not represent a production network deployment or demonstrate advanced enterprise routing, firewall configuration, or production network security controls.
+
